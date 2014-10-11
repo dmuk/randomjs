@@ -10,9 +10,9 @@ function setImages() {
 	 	images[i] = new Image(50, 50);
 	 	images[i].src = "imgs/righthand"+(i+1)+".jpg";
 	}
-    	for(j = inumberRightHand; j < inumberLeftHand+inumberRightHand; j++) { 
-	 	images[j] = new Image(50, 50);
-	 	images[j].src = "img/lefthand"+(j+1)+".jpg";
+    	for(j = 0; j < inumberLeftHand; j++) { 
+	 	images[j+inumberRightHand] = new Image(50, 50);
+	 	images[j+inumberRightHand].src = "img/lefthand"+(j+1)+".jpg";
     	}
 }
 
