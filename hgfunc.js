@@ -8,7 +8,7 @@ var inumberLeftHand = 10;
 function setImages() {
 	for(i = 0; i < inumberRightHand; i++) {
 	 	images[i] = new Image(50, 50);
-	 	iimages.src[i] = "imgs/righthand"+(i+1)+".jpg";
+	 	images.src[i] = "imgs/righthand"+(i+1)+".jpg";
 	}
     	for(j = inumberRightHand; j < inumberLeftHand+inumberRightHand; j++) { 
 	 	images[j] = new Image(50, 50);
