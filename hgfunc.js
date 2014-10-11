@@ -57,9 +57,11 @@ function chooseRight() {
 }
 
 function resetGame() {
+	var currentImage = document.getElementById("slide");
+	var randomNumber = Math.floor(Math.random() * (1+inumberRightHand+inumberLeftHand));
+	var scoreHTML = document.getElementById("score");
 	score = 0;
 	attempts = 0;
-	var scoreHTML = document.getElementById("score");
 	scoreHTML.innerHTML = score.toString();
 	currentImage.src = images[randomNumber].src;
 }
