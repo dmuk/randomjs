@@ -10,7 +10,7 @@ function setImages() {
 	 	handimages[i] = new Image(50, 50);
 	 	handimages.src[i] = "imgs/righthand"+(i+1)+".jpg";
 	}
-    	for(int j = 0; j < inumberLeftHand; j++) { 
+    	for(int j = inumberRightHand; j < inumberLeftHand+inumberRightHand; j++) { 
 	 	handimages[j] = new Image(50, 50);
 	 	handimages[j].src = "img/lefthand"+(j+1)+".jpg";
     	}
