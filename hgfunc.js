@@ -16,6 +16,10 @@ function setImages() {
     	}
 }
 
+function startGame() {
+	var currentImage = document.getElementById("slide");
+	currentImage.style.display = "block";
+}
 
 function chooseLeft() {
 	var currentImage = document.getElementById("slide");
