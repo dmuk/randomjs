@@ -23,7 +23,7 @@ function startGame() {
 
 function chooseLeft() {
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * 21);
+	var randomNumber = Math.floor(Math.random() * (1+images.Length));
 	var scoreHTML = document.getElementById("score");
 	if (attempts != 20) {
 		if (currentImage.src.indexOf("left") < 0) {
@@ -35,6 +35,7 @@ function chooseLeft() {
 			scoreHTML.innerHTML = score.toString();
 			currentImage.src = images[randomNumber].src;
 		}
+		images.splice(randomNumber,1);
 	} else {
 		alert("Game Finished!" + "\n" + "You scored: " + score + "/20");
 	}
@@ -42,7 +43,7 @@ function chooseLeft() {
 
 function chooseRight() {
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * (1+inumberRightHand+inumberLeftHand));
+	var randomNumber = Math.floor(Math.random() * (1+images.Length));
 	var scoreHTML = document.getElementById("score");
 	if (attempts != 20) {
 		if (currentImage.src.indexOf("right") < 0) {
@@ -54,6 +55,7 @@ function chooseRight() {
 			scoreHTML.innerHTML = score.toString();
 			currentImage.src = images[randomNumber].src;
 		}
+		images.splice(randomNumber,1);
 	} else {
 		alert("Game Finished!" + "\n" + "You scored: " + score + "/20");
 	}
@@ -61,13 +63,15 @@ function chooseRight() {
 }
 
 function resetGame() {
+	setImages();
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * (1+inumberRightHand+inumberLeftHand));
+	var randomNumber = Math.floor(Math.random() * (1+images.Length));
 	var scoreHTML = document.getElementById("score");
 	score = 0;
 	attempts = 0;
 	scoreHTML.innerHTML = score.toString();
 	currentImage.src = images[randomNumber].src;
+	images.splice(randomNumber,1);
 }
 
 function finishEarly() {
