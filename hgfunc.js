@@ -18,7 +18,9 @@ function setImages() {
 
 function startGame() {
 	var currentImage = document.getElementById("slide");
-	currentImage.style.visibility = "visible";
+	var startButton = document.getElementById("startButton");
+	startButton.style.display = "none";
+	currentImage.style.display = "block";
 }
 
 function chooseLeft() {
