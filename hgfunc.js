@@ -51,7 +51,7 @@ function chooseRight() {
 			currentImage.src = images[randomNumber].src;
 		}
 	} else {
-		alert("Game Finished!" + "\n" + "You scored: " + score);
+		alert("Game Finished!" + "\n" + "You scored: " + score + "/20");
 	}
 
 }
@@ -65,5 +65,5 @@ function resetGame() {
 }
 
 function finishEarly() {
-	alert("Game Finished Early!" + "\n" + "You scored: " + score);
+	alert("Game Finished Early!" + "\n" + "You scored: " + score + "/" + attempts);
 }
