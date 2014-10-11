@@ -6,11 +6,11 @@ var inumberLeftHand = 10;
         
 
 function setImages() {
-	for(int i = 0; i < inumberRightHand; i++) {
+	for(i = 0; i < inumberRightHand; i++) {
 	 	handimages[i] = new Image(50, 50);
 	 	handimages.src[i] = "imgs/righthand"+(i+1)+".jpg";
 	}
-    	for(int j = inumberRightHand; j < inumberLeftHand+inumberRightHand; j++) { 
+    	for(j = inumberRightHand; j < inumberLeftHand+inumberRightHand; j++) { 
 	 	handimages[j] = new Image(50, 50);
 	 	handimages[j].src = "img/lefthand"+(j+1)+".jpg";
     	}
