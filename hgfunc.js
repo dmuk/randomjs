@@ -32,7 +32,7 @@ function chooseLeft() {
 			currentImage.src = images[randomNumber].src;
 		}
 	} else {
-		alert("Game Finished!" + "\n" + "You scored: " + score);
+		alert("Game Finished!" + "\n" + "You scored: " + score + "/20");
 	}
 }
 
