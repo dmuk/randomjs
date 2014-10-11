@@ -12,7 +12,7 @@ function setImages() {
 	}
     	for(j = 0; j < inumberLeftHand; j++) { 
 	 	images[j+inumberRightHand] = new Image(50, 50);
-	 	images[j+inumberRightHand].src = "img/lefthand"+(j+1)+".jpg";
+	 	images[j+inumberRightHand].src = "imgs/lefthand"+(j+1)+".jpg";
     	}
 }
 
