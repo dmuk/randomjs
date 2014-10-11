@@ -1,19 +1,15 @@
 var images = new Array(20);
 var score = 0;
 var attempts = 0;
-
+var inumberRightHand = 10;
+var inumberLeftHand = 10;
+        
 
 function setImages() {
-	
-	
-	int inumberRightHand = 10;
-        int inumberLeftHand = 10;
-	    
 	for(int i = 0; i < inumberRightHand; i++) {
 	 	handimages[i] = new Image(50, 50);
 	 	handimages.src[i] = "imgs/righthand"+(i+1)+".jpg";
 	}
-
     	for(int j = 0; j < inumberLeftHand; j++) { 
 	 	handimages[j] = new Image(50, 50);
 	 	handimages[j].src = "img/lefthand"+(j+1)+".jpg";
@@ -42,7 +38,7 @@ function chooseLeft() {
 
 function chooseRight() {
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * 21);
+	var randomNumber = Math.floor(Math.random() * (1+inumberRightHand+inumberLeftHand));
 	var scoreHTML = document.getElementById("score");
 	if (attempts != 20) {
 		if (currentImage.src.indexOf("right") < 0) {
