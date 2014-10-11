@@ -18,9 +18,19 @@ function setImages() {
 
 function startGame() {
 	var currentImage = document.getElementById("slide");
-	var startButton = document.getElementById("startButton");
-	startButton.style.display = "none";
+	var startBtn = document.getElementById("startButton");
+	var leftBtn = document.getElementById("left");
+	var rightBtn = document.getElementById("right");
+	var orTxt = document.getElementById("or");
+	var scoreHTML = document.getElementById("score");
+	
+	startBtn.style.display = "none";
 	currentImage.style.display = "block";
+	currentImage.style.margin = "0 auto 30px";
+	leftBtn.style.display = "inline";
+	rightBtn.style.display = "inline";
+	orTxt.style.display = "inline";
+	scoreHTML.style.display = "block";
 }
 
 function chooseLeft() {
