@@ -52,13 +52,12 @@ function startGame() {
 */  
 function chooseHand(bool isLeftHand) {
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * (1+images.Length));
+	var randomNumber = Math.floor(Math.random() * (1+images.length));
 	var scoreHTML = document.getElementById("score");
 	if (attempts != 20) {
 		if ((currentImage.src.indexOf("left") < 0 && isLeftHand == true) || (currentImage.src.indexOf("right") < 0 && isLeftHand == false)) {
 			attempts++;
 			currentImage.src = images[randomNumber].src;
-		}
 		} else {
 			attempts++;
 			score++;
