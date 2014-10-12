@@ -77,7 +77,7 @@ function chooseHand(bool isLeftHand) {
 function resetGame() {
 	setImages();
 	var currentImage = document.getElementById("slide");
-	var randomNumber = Math.floor(Math.random() * (1+images.Length));
+	var randomNumber = Math.floor(Math.random() * (1+images.length));
 	var scoreHTML = document.getElementById("score");
 	score = 0;
 	attempts = 0;
